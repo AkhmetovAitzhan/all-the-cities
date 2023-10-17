@@ -33,7 +33,7 @@ cities.filter(city => city.name.match('Albuquerque'));
    population: 545852,
    loc: {
      type: 'Point',
-     coordinates: [-106.65114, 35.084] 
+     coordinates: [-106.65115, 35.084] 
    }
  }, {
    cityId: '5476960',
