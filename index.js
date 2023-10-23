@@ -9,16 +9,13 @@ var lastLat = 0
 var lastLon = 0
 while (pbf.pos < pbf.length) {
     cities.push(pbf.readMessage(readCity, {
-        cityId: '',
+        id: '',
         name: '',
-        altName:'',
-        country: '',
-        featureCode: '',
-        adminCode: '',
-        population: 0,
-        loc: {
-            type: 'Point',
-            coordinates: [0, 0] //[lon,lat]
+        country_code: '',
+        country_name: '',
+        location: {
+            latitude: 0,
+            longitude: 0,
         }
     }))
 }
@@ -26,20 +23,15 @@ while (pbf.pos < pbf.length) {
 module.exports = cities
 
 function readCity(tag, city, pbf) {
-    if (tag === 1) city.cityId = pbf.readSVarint()
+    if (tag === 1) city.id = pbf.readSVarint()
     else if (tag === 2) city.name = pbf.readString()
-    else if (tag === 3) city.country = pbf.readString()
-    else if (tag === 4) city.altName = pbf.readString()
-    else if (tag === 5) city.muni = pbf.readString()
-    else if (tag === 6) city.muniSub = pbf.readString()
-    else if (tag === 7) city.featureCode = pbf.readString()
-    else if (tag === 8) city.adminCode = pbf.readString()
-    else if (tag === 9) city.population = pbf.readVarint()
-    else if (tag === 10) {
+    else if (tag === 3) city.country_code = pbf.readString()
+    else if (tag === 4) city.country_name = pbf.readString()
+    else if (tag === 5) {
         lastLon += pbf.readSVarint()
-        city.loc.coordinates[0] = lastLon / 1e5
-    } else if (tag === 11) {
+        city.location.latitude = lastLon / 1e5
+    } else if (tag === 6) {
         lastLat += pbf.readSVarint()
-        city.loc.coordinates[1] = lastLat / 1e5
+        city.location.longitude = lastLat / 1e5
     }
 }

@@ -1,8 +1,8 @@
 # all-the-cities
 
-All the 138,398 cities of the world with a population of at least 1000 inhabitants, in a big JSON array that is ready to be imported in MongoDB for `geoSpatialSearch`.
+All the 150,553 cities of the world in a big JSON array that is ready to be imported in MongoDB for `geoSpatialSearch`.
 
-Derived from the [cities-with-1000](https://www.npmjs.com/package/cities-with-1000) npm package, which in turn came from [geonames.org data](http://download.geonames.org/export/dump/).
+Cities from the [countries-states-cities-database](https://github.com/dr5hn/countries-states-cities-database).
 
 ## Installation
 

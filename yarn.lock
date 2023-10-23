@@ -36,10 +36,6 @@ call-bind@^1.0.0, call-bind@^1.0.2, call-bind@~1.0.2:
     function-bind "^1.1.1"
     get-intrinsic "^1.0.2"
 
-"cities-with-1000@https://github.com/AkhmetovAitzhan/cities1000.git":
-  version "1.0.5"
-  resolved "https://github.com/AkhmetovAitzhan/cities1000.git#ee5b320e8955355472fd78d880d065f182e64ca1"
-
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
