@@ -1,9 +1,9 @@
 const cities = require('.')
 
-console.log(cities.filter(city => {
-  return city.name.match('Nur-Sultan')
-}))
-console.log(cities.length)
+// console.log(cities.filter(city => {
+//   return city.name.match('Nur-Sultan')
+// }))
+console.log(cities.find(c => Math.abs(c.location.latitude) > 180));
 
 // [{
 //     id: 65737,

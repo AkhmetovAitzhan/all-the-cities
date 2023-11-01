@@ -29,9 +29,9 @@ function readCity(tag, city, pbf) {
     else if (tag === 4) city.country_name = pbf.readString()
     else if (tag === 5) {
         lastLon += pbf.readSVarint()
-        city.location.latitude = lastLon / 1e5
+        city.location.longitude = lastLon / 1e5
     } else if (tag === 6) {
         lastLat += pbf.readSVarint()
-        city.location.longitude = lastLat / 1e5
+        city.location.latitude = lastLat / 1e5
     }
 }
