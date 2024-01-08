@@ -11,7 +11,7 @@ let lastLon = 0
 
 function writeCity(city, pbf) {
     pbf.writeSVarintField(1, city.id)
-    pbf.writeStringField(2, city.name)
+    pbf.writeStringField(2, city.name === 'Nur-Sultan' ? 'Astana' : city.name)
     pbf.writeStringField(3, city.country_code)
     pbf.writeStringField(4, city.country_name)
 

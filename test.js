@@ -9,5 +9,5 @@ test('all-the-cities', function (t) {
   t.ok(cities[0].country_code, 'cities have a country code')
   t.ok(cities[0].location.latitude, 'cities have a lat')
   t.ok(cities[0].location.longitude, 'cities have a lon')
-  t.ok(Boolean(cities.find(c => c.name === 'Nur-Sultan')), 'Astana city exists')
+  t.ok(Boolean(cities.find(c => c.name === 'Astana')), 'Astana city exists')
 })
